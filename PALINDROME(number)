@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int number,reverse=0,originalnumber,lastdigit;
+	printf("Enter the number:\n");
+	scanf("%d",&number);
+	originalnumber=number;
+	while(number)
+	{
+	 lastdigit=number%10;
+	 reverse=reverse*10+lastdigit;
+	 number=number/10;
+	}
+	if(reverse==originalnumber)
+	    printf("PALINDROME");
+	 else
+	    printf("NOT-PALINDROME");
+	return 0;
+}
