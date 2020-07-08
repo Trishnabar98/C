@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include<math.h>
+int main(void) {
+	// your code goes here
+	int number,power=0,originalnumber,lastdigit,sum=0;
+	printf("Enter the number:\n");
+	scanf("%d",&number);
+	originalnumber=number;
+	while(number)
+	{
+	    number/=10;
+	    power++;
+	}
+	number=originalnumber;
+	while(number)
+	{
+	    lastdigit=number%10;
+	    sum+=pow(lastdigit,power);
+	    number/=10;
+	    
+	}
+	if(originalnumber==sum)
+	    printf("ARMSTRONG_NUMBER\n");
+	else
+	    printf("NOT ARMSTRONG_NUMBER\n");
+	
+	return 0;
+}
+
