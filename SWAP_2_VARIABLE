@@ -1,0 +1,79 @@
+#include <stdio.h>
+
+/*int main(void) {
+	// swap two variable using 3rd variable
+	int a,b,temp;
+	printf("Enter the value of a:\n");
+	scanf("%d",&a);
+	printf("Enter the value of b:\n");
+	scanf("%d",&b);
+	printf("Before swaping the value of a:%d & b:%d\n",a,b);
+	
+	temp=a;
+	a=b;
+	b=temp;
+	
+	printf("After swaping the value of a:%d & b:%d\n",a,b);
+    return 0;
+}
+	
+*/
+//swap two variable using function
+/*void swap(int *a,int *b)
+{
+    int temp;
+    temp=*a;
+    *a=*b;
+    *b=temp;
+}
+int main(void)
+{
+    int a,b,temp;
+	printf("Enter the value of a:\n");
+	scanf("%d",&a);
+	printf("Enter the value of b:\n");
+	scanf("%d",&b);
+	printf("Before swaping the value of a:%d & b:%d\n",a,b);
+	
+	swap(&a,&b);
+	
+	printf("After swaping the value of a:%d & b:%d\n",a,b);
+    
+	return 0;
+}*/
+//swap two number without using 3rd variable
+/*int main(void) {
+	
+	int a,b;
+	printf("Enter the value of a:\n");
+	scanf("%d",&a);
+	printf("Enter the value of b:\n");
+	scanf("%d",&b);
+	printf("Before swaping the value of a:%d & b:%d\n",a,b);
+	
+	a=a+b;
+	b=a-b;
+	a=a-b;
+	
+	printf("After swaping the value of a:%d & b:%d\n",a,b);
+    return 0;
+}*/
+
+//swap two number without using Bitwise operator
+int main(void) {
+	
+	int a,b;
+	printf("Enter the value of a:\n");
+	scanf("%d",&a);
+	printf("Enter the value of b:\n");
+	scanf("%d",&b);
+	printf("Before swaping the value of a:%d & b:%d\n",a,b);
+	
+	a=a^b;
+	b=a^b;
+	a=a^b;
+	
+	printf("After swaping the value of a:%d & b:%d\n",a,b);
+    return 0;
+}
+
