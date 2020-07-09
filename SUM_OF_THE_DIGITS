@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int number,count=0,sum=0,lastdigit;
+	printf("Enter the number:\n");
+	scanf("%d",&number);
+	while(number)
+	{
+	    lastdigit=number%10;
+	    sum+=lastdigit;
+	    count++;
+	    number/=10;
+	}
+	printf("sum of the digits:%d",sum);
+	return 0;
+}
+
