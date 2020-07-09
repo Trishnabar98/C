@@ -1,0 +1,31 @@
+#include <stdio.h>
+int factorial(int n)
+	{
+	    int i,f=1;
+	    for(i=1;i<=n;i++)
+	    {
+	        f*=i;
+	    }
+	    return f;
+	    
+	}
+int main(void) {
+	// your code goes here
+	int number,originalnumber,fact,lastdigit,sum=0;
+	printf("Enter the number:\n");
+	scanf("%d",&number);
+	originalnumber=number;
+	while(number)
+	{
+	    lastdigit=number%10;
+	    fact=factorial(lastdigit);
+	    sum+=fact;
+	    number/=10;
+	}
+	if(sum==originalnumber)
+	    printf("STRONG NO.\n");
+	else
+	    printf("NOT A STRONG NO.");
+	return 0;
+}
+
