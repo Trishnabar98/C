@@ -8,7 +8,7 @@ int findmax(int a,int b)
     return max;
 }
 int main(void) {
-	// your code goes here
+	
 	int a,b,max;
 	printf("Enter the 1st number:\n");
 	scanf("%d",&a);
@@ -18,4 +18,3 @@ int main(void) {
 	printf("maximum number is: %d",max);
 	return 0;
 }
-
