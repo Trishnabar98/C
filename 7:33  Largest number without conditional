@@ -1,0 +1,21 @@
+#include <stdio.h>
+int findmax(int a,int b)
+{
+    int max,i,z;
+    z=a-b;
+    i=(z>>31) & 0x1;
+    max=a-(i*z);
+    return max;
+}
+int main(void) {
+	// your code goes here
+	int a,b,max;
+	printf("Enter the 1st number:\n");
+	scanf("%d",&a);
+	printf("Enter the 2nd number:\n");
+	scanf("%d",&b);
+	max=findmax(a,b);
+	printf("maximum number is: %d",max);
+	return 0;
+}
+
