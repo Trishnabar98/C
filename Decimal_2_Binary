@@ -1,0 +1,26 @@
+#include <stdio.h>
+int Decimal2Binary(int number)
+{
+    int binary=0,i=1,reminder;
+    while(number)
+    {
+        reminder=number%2;
+        number=number/2;
+        binary+=reminder*i;
+        i*=10;
+    }
+    return binary;
+}
+
+int main(void) {
+	// your code goes here
+	int number,binary;
+	printf("Enter the decimal number:\n");
+	scanf("%d",&number);
+	binary=Decimal2Binary(number);
+	printf("Decimal to Binary Convertion of %d is %d\n",number,binary);
+	return 0;
+}
+
+
+
