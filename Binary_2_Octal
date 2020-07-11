@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include<math.h>
+
+int Binary2Decimal(int number)
+{
+    int Decimal=0,i=0,lastdigit;
+    while(number)
+    {
+        lastdigit=number%10;
+        number=number/10;
+        Decimal+=lastdigit*pow(2,i);
+        i++;
+    }
+    return Decimal;
+}
+int Binary2Octal(int number)
+{
+    int value,i=1,lastdigit,octal=0;
+    while(number)
+    {
+        lastdigit=number%1000;
+        
+        value=Binary2Decimal(lastdigit);
+        octal+=value*i;
+        i*=10;
+        number=number/1000;
+        
+    }
+    return octal;
+}
+
+int main(void) {
+	// your code goes here
+	int number,octal;
+	printf("Enter the binary number:\n");
+	scanf("%d",&number);
+	octal=Binary2Octal(number);
+	printf("Binary to Octal Convertion of %d is: %d\n",number,octal);
+	return 0;
+}
+
