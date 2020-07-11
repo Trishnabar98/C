@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int a,b,low,lcm;
+	printf("Enter the 1st number:\n");
+	scanf("%d",&a);
+	printf("Enter the 2nd number:\n");
+	scanf("%d",&b);
+	low=(a>b)?a:b;
+	while(1)
+	{
+	    if((low%a==0)&&(low%b==0))
+	    {
+	        lcm=low;
+	        break;
+	    }
+	    low++;
+	}
+	printf("The lcm of %d & %d is %d\n",a,b,lcm);
+	
+	return 0;
+}
+
