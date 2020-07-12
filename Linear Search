@@ -1,0 +1,36 @@
+#include <stdio.h>
+//#include<limits.h>
+int main(void) {
+	// your code goes here
+	int key,i,a[20],position=-1,n;
+	printf("Enter the sizeof the array:\n");
+	scanf("%d",&n);
+	printf("enter the array elements:\n");
+	for(i=0;i<n;i++)
+	{
+	    scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+	    printf("%d\t",a[i]);
+	}
+	printf("\nEnter the searched element:\n");
+	scanf("%d",&key);
+	for(i=0;i<n;i++)
+	{
+	    if(key==a[i])
+	    {
+	        position=i;
+	        break;
+	    }
+	    
+	}
+
+	if(position==-1)
+	    printf("the element %d is not available\n",key);
+	else
+	    printf("The element %d is available at position %d\n",key,i);
+	
+	return 0;
+}
+
