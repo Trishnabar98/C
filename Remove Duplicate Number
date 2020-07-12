@@ -1,1 +1,39 @@
+#include <stdio.h>
+#include<limits.h>
+int main(void) {
+	// your code goes here
+	int j,k,i,a[20],n,a2[20]={0},exist;
+	printf("Enter the sizeof the array:\n");
+	scanf("%d",&n);
+	printf("enter the array elements:\n");
+	for(i=0;i<n;i++)
+	{
+	    scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+	    printf("%d\t",a[i]);
+	}
+	for(i=0,j=0;i<n;i++)
+	{   int key=a[i],exist=0;
+	    for(k=0;k<i;k++)
+	    {
+	        if(a2[k]==a[i])
+	            exist=1;
+	            
+	    }
+	    if(!exist)
+	    {
+	        a2[j]=a[i];
+	        j++;
+	    }
+	}
+	printf("\nThe elements of array after removing duplicates:\n");
+	for(i=0;i<j;i++)
+	    printf("%d\t",a2[i]);
+
+	
+	return 0;
+}
+
 
