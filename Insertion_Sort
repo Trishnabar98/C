@@ -1,0 +1,39 @@
+#include <stdio.h>
+void insertion_sort(int a[],int n)
+{
+    int i,value,j;
+    for(i=1;i<=n-1;i++)
+    {
+        value=a[i];
+        j=i-1;
+        while(j>=0 && a[j]>value)
+        {
+            a[j+1]=a[j];
+            j=j-1;
+        }
+        a[j+1]=value;
+    }
+    
+}
+
+
+int main(void) {
+	// your code goes here
+	int i,a[10],n;
+	printf("Enter the size of the given array:\n");
+	scanf("%d",&n);
+	printf("\nEnter the array elements:\n");
+	for(i=0;i<n;i++)
+	    scanf("%d",&a[i]);
+	 for(i=0;i<n;i++)
+	    printf("%d\t",a[i]);   
+	printf("\nArray before sort:\n");    
+	for(i=0;i<n;i++)
+	    printf("%d\t",a[i]);
+	insertion_sort(a,n);
+	printf("\nArray after sort:\n"); 
+	for(i=0;i<n;i++)
+	    printf("%d\t",a[i]);
+	    
+	return 0;
+}
