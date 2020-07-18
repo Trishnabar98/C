@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int number,octal=0,reminder=0,place=1;
+	printf("Enter the decimal number:");
+	scanf("%d",&number);
+	while(number)
+	{
+	    reminder=number%8;
+	    octal+=reminder*place;
+	    number/=8;
+	    place*=10;
+	}
+	printf("\nDecimal to Octal Convertion of %d is: %d\n",number,octal);
+	return 0;
+}
+
