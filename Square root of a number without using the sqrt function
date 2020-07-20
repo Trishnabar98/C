@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int num;
+	float square_root,temp;
+	printf("Enter the number:\t");
+	scanf("%d",&num);
+	
+	square_root=num/2;
+	temp=0;
+	while(square_root!=temp)
+	{
+	    temp=square_root;
+	    square_root=(num/temp+temp)/2;
+	}
+	 printf("The square root of '%d' is '%f'", num, square_root);
+	return 0;
+}
+
+
