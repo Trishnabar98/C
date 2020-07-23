@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+bool tocheckprime(int number)
+{
+    int i;
+    if(number==1)
+        return false;
+    for(i=2;i<=(number/2);i++)
+    {
+        if(number%i==0)
+            return false;
+    }
+    return true;
+}
+
+int primesum(int l,int r)
+{
+    int sum=0;
+    int i;
+    for(i=r;i>=l;i--)
+    {
+        bool isprime=tocheckprime(i);
+        if(isprime)
+        {
+            sum+=i;
+        }
+    }
+    return sum;
+}
+int main(void) {
+	// your code goes here
+	int l,r,sum_of_primes;
+	printf("enter the value of l :\t");
+	scanf("%d",&l);
+	printf("\nenter the value of r :\t");
+	scanf("%d",&r);
+	sum_of_primes=primesum(l,r);
+	printf("\nsum of the primme numbers from %d to %d:%d\n",l,r,sum_of_primes);
+	
+	
+	return 0;
+}
+
+
