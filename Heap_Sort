@@ -1,1 +1,61 @@
+#include <stdio.h>
+
+void heapify(int a[],int n,int i)
+{
+    int large=i;
+    int l=2*i+1;
+    int r=2*i+2;
+    
+    if(l<n && a[l]>a[large])
+        large=l;
+    if(r<n && a[r]>a[large])
+        large=r;
+        
+    if(large!=i)
+    {
+        int t=a[i];
+        a[i]=a[large];
+        a[large]=t;
+        
+         heapify(a,n,large);
+    }
+    
+    
+}
+void heap_sort(int a[],int n)
+{
+    int i;
+    for(i=n/2-1;i>=0;i--)
+        heapify(a,n,i);
+    for(i=n-1;i>0;i--)
+    {
+        int temp=a[0];
+        a[0]=a[i];
+        a[i]=temp;
+        
+        heapify(a,i,0);
+    }
+    
+}
+void print_array(int a[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+        printf("%d\t",a[i]);
+    printf("\n");    
+}
+
+int main(void) {
+	// your code goes here
+	 int arr[] = {2, 101, 0, 5, 6, -7}; 
+    int n = sizeof(arr)/sizeof(arr[0]); 
+  
+    heap_sort(arr, n); 
+  
+    printf("Sorted array is \n"); 
+    print_array(arr, n); 
+	
+	return 0;
+}
+
 
