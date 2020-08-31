@@ -1,3 +1,5 @@
+//iterative_method
+
 #include <stdio.h>
 #include<math.h>
 int main(void) {
@@ -26,4 +28,35 @@ int main(void) {
 	
 	return 0;
 }
+
+//recursive_method
+
+#include <stdio.h>
+
+int armstrong(int n)
+{
+    int sum=0;
+    if(n!=0)
+    {
+        sum=((n%10)*(n%10)*(n%10))+armstrong(n/10);
+    }
+    return sum;
+    
+}
+
+int main(void) {
+	int num,n,originalnumber;
+	printf("enter the value:\n");
+	scanf("%d",&num);
+	originalnumber=num;
+	n=armstrong(num);
+	if(originalnumber==n)
+	    printf("ARMSTRONG_NUMBER\n");
+	else
+	    printf("NOT ARMSTRONG_NUMBER\n");
+	
+	return 0;
+}
+
+
 
