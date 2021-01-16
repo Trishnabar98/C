@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int power(int base,int p)
+{
+    if(p==0)
+        return 1;
+    
+    return (base*power(base,p-1));            
+}
+int main(void) {
+	// your code goes here
+	printf("%d",power(2,1));
+	
+	return 0;
+}
+
