@@ -59,4 +59,34 @@ int main(void) {
 }
 
 
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+	// your code goes here
+	int n,temp,rem,sum=0,d=0;
+	cin>>n;
+	temp=n;
+	d=floor(log10(n)+1);
+	while(n!=0)
+	{
+	    rem=n%10;
+	    sum+=pow(rem,d);
+	    n/=10;
+	    
+	}
+	
+	
+	if(temp==sum)
+	{
+	    cout<<"armstrong"<<endl;
+	}
+	else
+	{
+	    cout<<"not armstrong"<<endl;
+	}
+	
+	return 0;
+}
 
