@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n,sum=0,r,d=0,t;
+	cin>>n;
+	t=n;
+	//while(n>0)
+	
+	    d=floor(log10(n)+1);
+	
+	while(n>0)
+	{
+	    r=n%10;
+	    sum=sum+pow(r,d);
+	    n=n/10;
+	}
+	if(t==sum)
+	{
+	    cout<<"Armstrong";
+	}
+	else
+	{
+	    cout<<"not armstrong";
+	}
+	return 0;
+}
